@@ -1,5 +1,5 @@
 
-[Text2Talk.pptx](https://github.com/user-attachments/files/19788510/Text2Talk.pptx)
+Text2Talk slide show: [Text2Talk.pptx](https://github.com/user-attachments/files/19788510/Text2Talk.pptx)
 
 Text2Talk.pptx text2talk uses FreeTTS Library( https://sourceforge.net/projects/freetts/ )
 
