@@ -10,6 +10,12 @@ the GUI features A large text area that allows users to type or paste the text t
 Text2Talk helps individuals with visual impairments or reading difficulties by reading text aloud, Learners to hear correct pronunciations of typed words and phrases, Users can listen to notes, drafts, or written material hands-free,
 
 
+<img width="946" alt="Screen Shot 2025-04-17 at 7 57 56 PM" src="https://github.com/user-attachments/assets/44ba03d3-6ccb-4066-9516-5daadb9df2da" />
+
+
+
+
+
 -----break down of code--- 
 
 **IMPORTS**
