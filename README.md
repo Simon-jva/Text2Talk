@@ -14,34 +14,96 @@ Text2Talk helps individuals with visual impairments or reading difficulties by r
 
 **IMPORTS**
 
-  import java.awt.*;
-  import java.awt.event.*;
-  import javax.swing.*;
-  import com.sun.speech.freetts.*;
+    import java.awt.*;
+    import java.awt.event.*;
+    import javax.swing.*;
+    import com.sun.speech.freetts.*;
 
-    java.awt.* and java.awt.event.* ➔ for layout (buttons, sliders, labels) and button clicks.
-    javax.swing.* ➔ for GUI elements (window, text area, combo box).
-    com.sun.speech.freetts.* ➔ for FreeTTS, the library that does the text-to-speech speaking.
+  java.awt.* and java.awt.event.* ➔ for layout (buttons, sliders, labels) and button clicks.
+  javax.swing.* ➔ for GUI elements (window, text area, combo box).
+  com.sun.speech.freetts.* ➔ for FreeTTS, the library that does the text-to-speech speaking.
 
 
 **CLASS DECLARATION**
 
-  public class Text2SpeechGUI extends JFrame {
+    public class Text2SpeechGUI extends JFrame {
 
-    creates window 
+  creates window 
 
 
 **FIELDS**
 
-private JTextArea textArea;
-private JComboBox<String> voiceBox;
-private JSlider speedSlider;
-private JButton speakButton;
+    private JTextArea textArea;
+    private JComboBox<String> voiceBox;
+    private JSlider speedSlider;
+    private JButton speakButton;
 
-    textArea → where you type the text.
-    voiceBox → a dropdown list to select voices (currently only "kevin16").
-    speedSlider → a slider to control how fast the voice talks.
-    speakButton → when clicked, it triggers the talking.
+  textArea → where you type the text.
+  voiceBox → a dropdown list to select voices (currently only "kevin16").
+  speedSlider → a slider to control how fast the voice talks.
+  speakButton → when clicked, it triggers the talking.
+
+ ** Voice Array**
+
+     private static final String[] voices = {"kevin16"};
+
+  available voices
+
+ ** Constructor**
+
+    setTitle("Text to Speech");
+    setSize(400, 300);
+    setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    setLayout(new BorderLayout());
+
+  title, size, exit behavior, and layout manager
+
+
+  **adding all the piecies **
+
+  text
+      
+    textArea = new JTextArea("Enter text here...");
+    add(new JScrollPane(textArea), BorderLayout.CENTER);
+
+  Control Panel
+
+    JPanel controlPanel = new JPanel();
+    controlPanel.setLayout(new GridLayout(3, 2));
+
+ ** button click event**
+
+     speakButton.addActionListener(new ActionListener() {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            speak();
+        }
+    });
+
+  calls speak method
+
+ ** speak method**
+
+     private void speak() {
+        String text = textArea.getText();
+        String voiceName = (String) voiceBox.getSelectedItem();
+        int speed = speedSlider.getValue();
+
+  Grabs whatever the user typed, the selected voice, and the speed they chose
+
+  then 
+
+      VoiceManager vm = VoiceManager.getInstance();
+    Voice voice = vm.getVoice(voiceName);
+
+  asks FreeTTs for the voices
+
+
+
+  
+      
+
+
 
   
 
