@@ -10,3 +10,43 @@ the GUI features A large text area that allows users to type or paste the text t
 Text2Talk helps individuals with visual impairments or reading difficulties by reading text aloud, Learners to hear correct pronunciations of typed words and phrases, Users can listen to notes, drafts, or written material hands-free,
 
 
+-----break down of code--- 
+
+**IMPORTS**
+
+  import java.awt.*;
+  import java.awt.event.*;
+  import javax.swing.*;
+  import com.sun.speech.freetts.*;
+
+    java.awt.* and java.awt.event.* ➔ for layout (buttons, sliders, labels) and button clicks.
+    javax.swing.* ➔ for GUI elements (window, text area, combo box).
+    com.sun.speech.freetts.* ➔ for FreeTTS, the library that does the text-to-speech speaking.
+
+
+**CLASS DECLARATION**
+
+  public class Text2SpeechGUI extends JFrame {
+
+    creates window 
+
+
+**FIELDS**
+
+private JTextArea textArea;
+private JComboBox<String> voiceBox;
+private JSlider speedSlider;
+private JButton speakButton;
+
+    textArea → where you type the text.
+    voiceBox → a dropdown list to select voices (currently only "kevin16").
+    speedSlider → a slider to control how fast the voice talks.
+    speakButton → when clicked, it triggers the talking.
+
+  
+
+  
+
+
+
+
