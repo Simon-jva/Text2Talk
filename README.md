@@ -43,13 +43,13 @@ Text2Talk helps individuals with visual impairments or reading difficulties by r
   speedSlider → a slider to control how fast the voice talks.
   speakButton → when clicked, it triggers the talking.
 
- ** Voice Array**
+ **Voice Array**
 
      private static final String[] voices = {"kevin16"};
 
   available voices
 
- ** Constructor**
+**Constructor**
 
     setTitle("Text to Speech");
     setSize(400, 300);
@@ -59,7 +59,7 @@ Text2Talk helps individuals with visual impairments or reading difficulties by r
   title, size, exit behavior, and layout manager
 
 
-  **adding all the piecies **
+  **adding all the piecies**
 
   text
       
@@ -71,7 +71,7 @@ Text2Talk helps individuals with visual impairments or reading difficulties by r
     JPanel controlPanel = new JPanel();
     controlPanel.setLayout(new GridLayout(3, 2));
 
- ** button click event**
+ **button click event**
 
      speakButton.addActionListener(new ActionListener() {
         @Override
@@ -82,7 +82,7 @@ Text2Talk helps individuals with visual impairments or reading difficulties by r
 
   calls speak method
 
- ** speak method**
+ **speak method**
 
      private void speak() {
         String text = textArea.getText();
